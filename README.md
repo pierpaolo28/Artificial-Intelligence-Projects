@@ -10,8 +10,8 @@ This web app is also available in my personal website and at this
 [link](https://sleepy-ridge-93654.herokuapp.com/predict). <br> 
 
 In order to create this repository I followed many tutorials and guides such as: <br>
-[Deploy a machine learning model using flask- Hemang Vyas](https://hackernoon.com/deploy-a-machine-learning-model-using-flask-da580f84e60c)
-[ML-Model-Flask-Deployment - Hemang Vyas](https://github.com/sauravk90/ML-Model-Flask-Deployment)
+[Deploy a machine learning model using flask- Hemang Vyas](https://hackernoon.com/deploy-a-machine-learning-model-using-flask-da580f84e60c) <br>
+[ML-Model-Flask-Deployment - Hemang Vyas](https://github.com/sauravk90/ML-Model-Flask-Deployment) <br>
 [Tutorial: Deploying a machine learning model to the web - Cambridge Spark](https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7)
 
 
