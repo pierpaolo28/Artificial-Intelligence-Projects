@@ -126,4 +126,3 @@ model = pickle.load(open('model.pkl','rb'))
 # #print(X_Test)
 # print(list(p).count(1))
 # print(list(p).count(2))
-
