@@ -19,8 +19,12 @@ def predict():
     prediction = model.predict(final_features)
 
     output = prediction
+    if output == '1':
+        res = "(Blood not donated)"
+    else:
+        res = "(Blood donated)"
 
-    return render_template('ml.html', prediction_text='The predicted employee salary is $ {}'.format(output))
+    return render_template('ml.html', prediction_text='The predicted result is {}, {}'.format(output), .format(res))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():

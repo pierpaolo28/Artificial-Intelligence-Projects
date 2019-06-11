@@ -444,34 +444,48 @@
 
     <main id="home">
       <div class="login">
-        <h1 class="lg-heading">Salary Prediction</h1>
+        <h1 class="lg-heading">Blood transfusion service center</h1>
         <h2 class="sm-heading">
-          Enter a numerical input to get a ML Regression prediction
+          Enter the required numerical inputs to get a ML Random Forest
+          Classification prediction
         </h2>
+        <h3>
+          <ol type="I">
+            <ul class="json" class="tit3" style="list-style-type:disc;">
+              <li>V1: Recency - months since last donation</li>
+              <li>V2: Frequency - total number of donation</li>
+              <li>V3: Monetary - total blood donated in c.c.</li>
+              <li>V4: Time - months since first donation)</li>
+            </ul>
+          </ol>
+          The target attribute is a binary variable representing whether a
+          person with the parameter entered would donate blood or not (2 stands
+          for donating blood; 1 stands for not donating blood).
+        </h3>
         <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('predict') }}" method="post">
           <input
             type="text"
             name="experience"
-            placeholder="Experience Years"
+            placeholder="Recency"
             required="required"
           />
           <input
             type="text"
             name="test_score"
-            placeholder="Test Result"
+            placeholder="Frequency"
             required="required"
           />
           <input
             type="text"
             name="interview_score"
-            placeholder="Interview Result"
+            placeholder="Monetary"
             required="required"
           />
           <input
             type="text"
             name="interview"
-            placeholder="Interview WOW"
+            placeholder="Time"
             required="required"
           />
           <button type="submit" class="btn btn-primary btn-block btn-large">
