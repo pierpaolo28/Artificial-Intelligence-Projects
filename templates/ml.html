@@ -446,26 +446,28 @@
 
     <main id="home">
       <div class="login">
-        <h1>Salary Analysis</h1>
-
+        <h1 class="lg-heading">Salary Prediction</h1>
+        <h2 class="sm-heading">
+          Enter a numerical input to get a ML Regression prediction
+        </h2>
         <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('predict') }}" method="post">
           <input
             type="text"
             name="experience"
-            placeholder="Experience"
+            placeholder="Experience Years"
             required="required"
           />
           <input
             type="text"
             name="test_score"
-            placeholder="Test Score"
+            placeholder="Test Result"
             required="required"
           />
           <input
             type="text"
             name="interview_score"
-            placeholder="Interview Score"
+            placeholder="Interview Result"
             required="required"
           />
 
@@ -478,7 +480,6 @@
         <br />
         {{ prediction_text }}
       </div>
-      <img src="profile.jpg" />
     </main>
     <script>
       // Select DOM Items
