@@ -1,4 +1,3 @@
 flask
 numpy
-matplotlib.pyplot
 requests
