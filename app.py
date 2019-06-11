@@ -24,7 +24,7 @@ def predict():
     else:
         res = "(Blood donated)"
 
-    return render_template('ml.html', prediction_text='The predicted result is {}'.format(output))
+    return render_template('ml.html', prediction_text='The predicted result is {} '.format(output)+res)
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
