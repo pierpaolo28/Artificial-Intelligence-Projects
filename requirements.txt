@@ -1,5 +1,4 @@
 flask
-pandas
+numpy
 gunicorn
-xgboost
-sklearn
+requests
