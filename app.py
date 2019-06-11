@@ -19,7 +19,7 @@ def predict():
     prediction = model.predict(final_features)
 
     output = prediction
-    if output == '1':
+    if output == 1:
         res = "(Blood not donated)"
     else:
         res = "(Blood donated)"
