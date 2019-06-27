@@ -1,0 +1,66 @@
+BLASTP 2.8.1+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro
+A. Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and
+David J. Lipman (1997), "Gapped BLAST and PSI-BLAST: a new
+generation of protein database search programs", Nucleic
+Acids Res. 25:3389-3402.
+
+
+Reference for compositional score matrix adjustment: Stephen
+F. Altschul, John C. Wootton, E. Michael Gertz, Richa
+Agarwala, Aleksandr Morgulis, Alejandro A. Schaffer, and
+Yi-Kuo Yu (2005) "Protein database searches using
+compositionally adjusted substitution matrices", FEBS J.
+272:5101-5109.
+
+
+RID: 6P13GW4F114
+
+
+Query= 
+Length=422
+
+
+                                                                   Score        E     Max
+Sequences producing significant alignments:                       (Bits)     Value  ident
+
+Query_124329 unnamed protein product                               88.2       2e-26  98%       
+
+ALIGNMENTS
+>Query_124329 unnamed protein product
+Length=101
+
+ Score = 88.2 bits (217),  Expect = 2e-26, Method: Compositional matrix adjust.
+ Identities = 40/41 (98%), Positives = 40/41 (98%), Gaps = 0/41 (0%)
+
+Query  5    HSGVNQLGGVFVNGRPLPDSTRQKIVELAHSGARPCDISRI  45
+            HSGVNQLGGVFV GRPLPDSTRQKIVELAHSGARPCDISRI
+Sbjct  61   HSGVNQLGGVFVGGRPLPDSTRQKIVELAHSGARPCDISRI  101
+
+
+ Score = 13.9 bits (24),  Expect = 2.1, Method: Compositional matrix adjust.
+ Identities = 8/30 (27%), Positives = 11/30 (37%), Gaps = 0/30 (0%)
+
+Query  300  PQPTTPVSSFTSGSMLGRTDTALTNTYSAL  329
+            P PT      ++ S    T +    TY  L
+Sbjct  26   PSPTMEAVEASTASHPHSTSSYFATTYYHL  55
+
+
+ Score = 13.5 bits (23),  Expect = 2.7, Method: Compositional matrix adjust.
+ Identities = 8/20 (40%), Positives = 13/20 (65%), Gaps = 1/20 (5%)
+
+Query  279  SNTPSHIPISSS-FSTSVYQ  297
+            ++T SH   +SS F+T+ Y 
+Sbjct  35   ASTASHPHSTSSYFATTYYH  54
+
+
+ Score = 12.7 bits (21),  Expect = 5.2, Method: Compositional matrix adjust.
+ Identities = 5/16 (31%), Positives = 8/16 (50%), Gaps = 0/16 (0%)
+
+Query  361  SPSVNGRSYDTYTPPH  376
+            SP++      T + PH
+Sbjct  27   SPTMEAVEASTASHPH  42
+
+
+
+
