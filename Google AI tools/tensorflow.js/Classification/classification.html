@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="Zkrpcge71CkhGPEkXP2eq2Bqe4Glh5q_uvpt2Ond624"
+    />
+    <!-- Import TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <!-- Import tfjs-vis -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+
+    <!-- Import the main script file -->
+    <script src="script2.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138942304-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-138942304-1");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../../dist/css/projects.css" />
+    <link rel="stylesheet" href="../../dist/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../../dist/img/Profile.ico"
+      type="image/x-icon"
+    />
+    <title>TensorFlow.js Classification</title>
+  </head>
+
+  <style>
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  </style>
+
+  <body style="color:black; ">
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="../../index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../../about.html" class="nav-link">
+              About Me
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="../../work.html" class="nav-link">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../../contact.html" class="nav-link">
+              How To Reach Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="lg-heading" style="color: #fff;">
+        Programming <span class="text-secondary"> Projects</span>
+      </h1>
+      <h2 class="sm-heading" style="text-align:center; color: #fff;">
+        TensorFlow.js Classification
+      </h2>
+      <p style="color: #fff;">
+        The dataset used is for this example is the "Wine Data Set" dataset.
+        <br />
+        The features contained in this dataset are: <br />
+        1) Fixed acidity <br />
+        2) Volatile acidity<br />
+        3) Citric acid<br />
+        4) Residual sugar<br />
+        5) Chlorides<br />
+        6) Free sulfur dioxide<br />
+        7) Total sulfur dioxide<br />
+        8) Density<br />
+        9) PH<br />
+        10) Sulphates<br />
+        11) Alcohol<br />
+        12) Quality<br />
+        And the label column (called style) identifies if a certain wine is
+        white (1) or red (0). This dataset is available to download
+        <a
+          href="https://www.kaggle.com/sgus1318/winedata"
+          style="color: #1a87ee;"
+          target="_blank"
+          >here.</a
+        >
+        <br />
+        <br />
+        If you are interested in a dataset analysis using Python instead of
+        TensorFlow.js, this is available
+        <a
+          href="https://github.com/pierpaolo28/Artificial-Intelligence-Projects/blob/master/Google%20AI%20tools/tensorflow.js/Classfication.ipynb"
+          style="color: #1a87ee;"
+          target="_blank"
+          >here.</a
+        >
+        <br />
+        <br />
+        For additional informations on how to create visor animations, the
+        <a
+          href="https://js.tensorflow.org/api_vis/latest/#visor"
+          style="color: #1a87ee;"
+          target="_blank"
+          >visor documentation</a
+        >
+        is a great place where to start.
+        <br />
+        <br />
+        You can use the buttons below to open or close the online Machine
+        Learning model window as you wish.
+      </p>
+
+      <style>
+        .button {
+          background-color: #444;
+          border: 2px solid #fff;
+          color: #fff;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 24px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        #container {
+          text-align: center;
+        }
+      </style>
+      <div id="container">
+        <button class="button" id="show-visor">
+          Display Visor
+        </button>
+      </div>
+      <div id="container">
+        <button class="button" id="hide-visor">
+          Hide Visor
+        </button>
+      </div>
+      <div id="container">
+        <button
+          onclick="location.href='/Projects/tensorflow.js/tensorjs.html'"
+          class="button"
+        >
+          Previous Page
+        </button>
+      </div>
+      <!-- Adding comments section -->
+      <div id="disqus_thread"></div>
+      <script>
+        (function() {
+          // DON'T EDIT BELOW THIS LINE
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://pier-paolo-website.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </main>
+
+    <footer id="main-footer">
+      Copyright &copy; 2019
+    </footer>
+
+    <script src="../../dist/js/main.js"></script>
+  </body>
+</html>

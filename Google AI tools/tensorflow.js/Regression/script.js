@@ -52,7 +52,7 @@ async function run() {
   // original data
   testModel(model, inputs, data, tensorData);
 
-  evaluateModelFunction(model, inputs, labels);
+  evaluateModelFunction(model, inputs, data.map(d => d.label));
 }
 
 async function trainModel(model, inputs, labels) {
@@ -79,9 +79,9 @@ async function trainModel(model, inputs, labels) {
 }
 
 async function evaluateModelFunction(model, inputs, labels) {
-  const result = await model.evaluate(inputs, labels, { batchSize: 32 });
-  console.log("Accuracy is:");
-  result[1].print();
+  const [preds, labels1] = doPrediction(model, inputs, labels);
+  const result = await tfvis.metrics.accuracy(labels1, preds);
+  console.log("The overall model accuracy is: ", result);
 }
 
 function setupListeners() {
@@ -157,6 +157,13 @@ function createModel() {
   model.add(tf.layers.dense({ units: 1, useBias: true }));
 
   return model;
+}
+
+function doPrediction(model, input, labels) {
+  const out = tf.tensor1d(labels, "int32");
+  const xs = input;
+  const preds = model.predict(xs.reshape([63, 1])).argMax([-1]);
+  return [preds, out];
 }
 
 function testModel(model, input, inputData, normalizationData) {

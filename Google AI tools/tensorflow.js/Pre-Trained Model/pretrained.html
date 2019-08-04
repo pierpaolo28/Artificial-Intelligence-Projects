@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
 
     <!-- Import the main script file -->
-    <script src="script.js"></script>
+    <script src="script3.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -42,7 +42,7 @@
       href="../../dist/img/Profile.ico"
       type="image/x-icon"
     />
-    <title>TensorFlow.js</title>
+    <title>TensorFlow.js Pretrained model</title>
   </head>
 
   <style>
@@ -94,34 +94,46 @@
         Programming <span class="text-secondary"> Projects</span>
       </h1>
       <h2 class="sm-heading" style="text-align:center; color: #fff;">
-        TensorFlow.js Example
+        TensorFlow.js using a Pre-Trained model
       </h2>
       <p style="color: #fff;">
-        In this project I created a simple interactive Machine Learning
-        regression online model using tensorflow.js. The dataset used is for
-        this purpose is the "Swedish Committee on Analysis of Risk Premium in
-        Motor Insurance" dataset. <br />
-        In this data-set, X = number of claims and Y = total payment for all the
-        claims in thousands of Swedish Kronor for geographical zones in Sweden.
+        The dataset used is for this example is the "Pima Indians Diabetes
+        Database" dataset.
         <br />
-        <br />
-        This dataset is available to download
+        The features contained in this dataset are: <br />
+        1) PregnanciesNumber of times pregnant <br />
+        2) GlucosePlasma glucose concentration a 2 hours in an oral glucose
+        tolerance test<br />
+        3) BloodPressureDiastolic blood pressure (mm Hg)<br />
+        4) SkinThicknessTriceps skin fold thickness (mm)<br />
+        5) Insulin2-Hour serum insulin (mu U/ml)<br />
+        6) BMIBody mass index (weight in kg/(height in m)^2)<br />
+        7) DiabetesPedigreeFunctionDiabetes pedigree function<br />
+        8) AgeAge (years)<br />
+        And the label column (called Outcome) identifies if someone suffers or
+        not of Diabetes (268 of 768 cases are 1, the others are 0). This dataset
+        is available to download
         <a
-          href="https://college.cengage.com/mathematics/brase/understandable_statistics/7e/students/datasets/slr/frames/frame.html"
+          href="https://www.kaggle.com/uciml/pima-indians-diabetes-database"
           style="color: #1a87ee;"
           target="_blank"
           >here.</a
         >
         <br />
         <br />
-        If you are interested in starting a project in tensorflow.js, the
+        For this example, I first trained a model using Tensorflow Eager
+        Execution (executes operations immediately, without building graphs:
+        operations return concrete values instead of constructing a
+        computational graph to run later) to create a Multi Layer Perceptron in
+        Python. Finally, I saved this trained model and deploy it online at this
+        page ready to make predictions. The Python script I used to create this
+        model is available
         <a
-          href="https://github.com/tensorflow/tfjs-examples"
+          href="https://github.com/pierpaolo28/Artificial-Intelligence-Projects/blob/master/Google%20AI%20tools/tensorflow.js/PreTrainedModel.ipynb"
           style="color: #1a87ee;"
           target="_blank"
-          >tensorflow.js documentation</a
+          >here.</a
         >
-        is a great place where to start.
         <br />
         <br />
         You can use the buttons below to open or close the online Machine
@@ -153,6 +165,14 @@
       <div id="container">
         <button class="button" id="hide-visor">
           Hide Visor
+        </button>
+      </div>
+      <div id="container">
+        <button
+          onclick="location.href='/Projects/tensorflow.js/tensorjs.html'"
+          class="button"
+        >
+          Previous Page
         </button>
       </div>
       <!-- Adding comments section -->
