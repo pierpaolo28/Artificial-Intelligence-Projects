@@ -1,0 +1,193 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+MERGED from [com.soundcloud.android:android-crop:1.0.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\android-crop-1.0.1.aar\f41424552f2bdf8a42b42662173d7953\AndroidManifest.xml:2:1-10:12
+MERGED from [org.tensorflow:tensorflow-lite:1.14.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\tensorflow-lite-1.14.0.aar\c667124e64cf4af5073d1ddb78740480\AndroidManifest.xml:2:1-10:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\2880db092bd038e1b8e89b6e43ceba1f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a2b65fc60f95d7ff853326a7b12e9295\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\3777dcae88177e1b9a0272e6681d512e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6242e054c6b30d07b131e4cca0b5f66b\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\5704786ef526ed7c73877c48ca026c86\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\4ef92ad8b9eb6143b4666d806f5cb2b0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\d9751bb04ac9e5a8790c167006098df8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\8c0491fa9db595bfa6bde01aa12a14aa\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\18eef89eafd2443c4e905160655e1843\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\7a6e8f62515c65dc03b1a1fa6c7f7615\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\5aa5f2d2deefc82be9be6e69fe5b2b7f\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f2c235e2c8e21c43ac373469847422a3\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\ba8cbf0337171b2d6823f8c18107261e\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\2f3b62ee7bc3e43ad4a92e00f81862b4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\3517e090d45b8b59593ea814e4b8d6ab\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b6260a0373d98030b17a663b88e291c8\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dfa74a34386d67b3278a00176abf2b39\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c65f2387ddc6f22292c31ab3ceed3639\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3df989ebee667d50d2d5cd7381333ef2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bf54c34644464a9b44decae357c61475\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\44641f61278e84b0d5b182a0a243045a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\cd6e342dfb840aaf8e681fd9dc3bd126\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\d528bcddc9038dbe8acef28b8a6b441e\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\759b596690ea71d6e4948f349d1f64ec\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\050b6fda4388d37ac7444db0953202c0\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\165a734db3fd5110382f113d6cf57006\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\df9990b7fd53053219869d4559fb5569\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+	package
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:3:5-43
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:1-34:12
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.camera
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:6:5-8:35
+	android:required
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:8:9-32
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:7:9-47
+uses-feature#android.hardware.camera.any
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:9:5-11:35
+	android:required
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:11:9-32
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:10:9-51
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:13:22-62
+application
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:15:5-32:19
+MERGED from [org.tensorflow:tensorflow-lite:1.14.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\tensorflow-lite-1.14.0.aar\c667124e64cf4af5073d1ddb78740480\AndroidManifest.xml:8:5-20
+MERGED from [org.tensorflow:tensorflow-lite:1.14.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\tensorflow-lite-1.14.0.aar\c667124e64cf4af5073d1ddb78740480\AndroidManifest.xml:8:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a2b65fc60f95d7ff853326a7b12e9295\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a2b65fc60f95d7ff853326a7b12e9295\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b6260a0373d98030b17a663b88e291c8\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b6260a0373d98030b17a663b88e291c8\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dfa74a34386d67b3278a00176abf2b39\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dfa74a34386d67b3278a00176abf2b39\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b6260a0373d98030b17a663b88e291c8\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:20:9-35
+	android:label
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:18:9-49
+	android:roundIcon
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:19:9-54
+	android:icon
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:17:9-43
+	android:allowBackup
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:16:9-35
+	android:theme
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:21:9-40
+activity#com.soumio.inceptiontutorial.ChooseModel
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:22:9-28:20
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:22:19-46
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:26:27-74
+activity#com.soumio.inceptiontutorial.Classify
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:29:9-55
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:29:19-43
+activity#com.soundcloud.android.crop.CropImageActivity
+ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:31:9-118
+	android:screenOrientation
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:31:80-116
+	android:name
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml:31:19-79
+uses-sdk
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+MERGED from [com.soundcloud.android:android-crop:1.0.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\android-crop-1.0.1.aar\f41424552f2bdf8a42b42662173d7953\AndroidManifest.xml:6:5-8:41
+MERGED from [com.soundcloud.android:android-crop:1.0.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\android-crop-1.0.1.aar\f41424552f2bdf8a42b42662173d7953\AndroidManifest.xml:6:5-8:41
+MERGED from [org.tensorflow:tensorflow-lite:1.14.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\tensorflow-lite-1.14.0.aar\c667124e64cf4af5073d1ddb78740480\AndroidManifest.xml:5:5-6:41
+MERGED from [org.tensorflow:tensorflow-lite:1.14.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\tensorflow-lite-1.14.0.aar\c667124e64cf4af5073d1ddb78740480\AndroidManifest.xml:5:5-6:41
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\2880db092bd038e1b8e89b6e43ceba1f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\2880db092bd038e1b8e89b6e43ceba1f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a2b65fc60f95d7ff853326a7b12e9295\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a2b65fc60f95d7ff853326a7b12e9295\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\3777dcae88177e1b9a0272e6681d512e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\3777dcae88177e1b9a0272e6681d512e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6242e054c6b30d07b131e4cca0b5f66b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\6242e054c6b30d07b131e4cca0b5f66b\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\5704786ef526ed7c73877c48ca026c86\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\5704786ef526ed7c73877c48ca026c86\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\4ef92ad8b9eb6143b4666d806f5cb2b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\4ef92ad8b9eb6143b4666d806f5cb2b0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\d9751bb04ac9e5a8790c167006098df8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\d9751bb04ac9e5a8790c167006098df8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\8c0491fa9db595bfa6bde01aa12a14aa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\8c0491fa9db595bfa6bde01aa12a14aa\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\18eef89eafd2443c4e905160655e1843\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\18eef89eafd2443c4e905160655e1843\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\7a6e8f62515c65dc03b1a1fa6c7f7615\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\7a6e8f62515c65dc03b1a1fa6c7f7615\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\5aa5f2d2deefc82be9be6e69fe5b2b7f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\5aa5f2d2deefc82be9be6e69fe5b2b7f\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f2c235e2c8e21c43ac373469847422a3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\f2c235e2c8e21c43ac373469847422a3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\ba8cbf0337171b2d6823f8c18107261e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\ba8cbf0337171b2d6823f8c18107261e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\2f3b62ee7bc3e43ad4a92e00f81862b4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\2f3b62ee7bc3e43ad4a92e00f81862b4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\3517e090d45b8b59593ea814e4b8d6ab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\3517e090d45b8b59593ea814e4b8d6ab\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b6260a0373d98030b17a663b88e291c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\b6260a0373d98030b17a663b88e291c8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dfa74a34386d67b3278a00176abf2b39\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\dfa74a34386d67b3278a00176abf2b39\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c65f2387ddc6f22292c31ab3ceed3639\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\c65f2387ddc6f22292c31ab3ceed3639\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3df989ebee667d50d2d5cd7381333ef2\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\3df989ebee667d50d2d5cd7381333ef2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bf54c34644464a9b44decae357c61475\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\bf54c34644464a9b44decae357c61475\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\44641f61278e84b0d5b182a0a243045a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\44641f61278e84b0d5b182a0a243045a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\cd6e342dfb840aaf8e681fd9dc3bd126\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\cd6e342dfb840aaf8e681fd9dc3bd126\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\d528bcddc9038dbe8acef28b8a6b441e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\d528bcddc9038dbe8acef28b8a6b441e\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\759b596690ea71d6e4948f349d1f64ec\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\759b596690ea71d6e4948f349d1f64ec\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\050b6fda4388d37ac7444db0953202c0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\050b6fda4388d37ac7444db0953202c0\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\165a734db3fd5110382f113d6cf57006\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\165a734db3fd5110382f113d6cf57006\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\df9990b7fd53053219869d4559fb5569\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\df9990b7fd53053219869d4559fb5569\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		MERGED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hp\Desktop\AI\Artificial Intelligence Projects\Google AI tools\TensorFlow-Lite-Image-Classifier\app\src\main\AndroidManifest.xml

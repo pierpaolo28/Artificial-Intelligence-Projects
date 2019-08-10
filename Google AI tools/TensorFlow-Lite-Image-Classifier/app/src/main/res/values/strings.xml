@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">InceptionTutorial</string>
+    <string name="inception_quantized_classifier">Inception Quantized Classifier</string>
+    <string name="android_image_classifier">Android Image Classifier</string>
+    <string name="classify">Classify Image</string>
+    <string name="back">Back</string>
+    <string name="label">Labels</string>
+    <string name="confidence">Confidence</string>
+    <string name="_1">1.</string>
+    <string name="_2">2.</string>
+    <string name="_3">3.</string>
+    <string name="todo">TODO</string>
+    <string name="todo2">TODO</string>
+</resources>

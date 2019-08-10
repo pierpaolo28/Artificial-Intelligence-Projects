@@ -1,0 +1,31 @@
+#Internal package file, do not edit.
+#Sat Aug 10 16:50:38 BST 2019
+2.base=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+5.set=NATIVE_RESOURCE
+0.path=lib/x86_64/libtensorflowlite_jni.so
+2.baseType=DIRECTORY
+3.base=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\assets\\debug
+2.set=NATIVE_RESOURCE
+1.path=lib/x86/libtensorflowlite_jni.so
+4.base=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\assets\\debug
+count=7
+5.baseType=DIRECTORY
+2.path=lib/armeabi-v7a/libtensorflowlite_jni.so
+5.base=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+4.set=ASSET
+3.path=inception_quant.tflite
+6.base=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+3.baseType=DIRECTORY
+1.set=NATIVE_RESOURCE
+4.path=labels.txt
+6.set=DEX
+1.baseType=DIRECTORY
+6.baseType=DIRECTORY
+5.path=lib/arm64-v8a/libtensorflowlite_jni.so
+0.base=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+0.baseType=DIRECTORY
+3.set=ASSET
+6.path=classes.dex
+1.base=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\transforms\\mergeJniLibs\\debug\\0
+4.baseType=DIRECTORY
+0.set=NATIVE_RESOURCE

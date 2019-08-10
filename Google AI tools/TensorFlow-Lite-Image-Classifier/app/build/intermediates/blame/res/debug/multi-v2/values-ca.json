@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ca\\values-ca.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-1\\files-1.1\\android-crop-1.0.1.aar\\f41424552f2bdf8a42b42662173d7953\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "215,291,339,413,471",
+                        "endColumns": "75,47,73,57,57",
+                        "endOffsets": "286,334,408,466,524"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "2879,2955,3003,3077,3135",
+                        "endColumns": "75,47,73,57,57",
+                        "endOffsets": "2950,2998,3072,3130,3188"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\b6260a0373d98030b17a663b88e291c8\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "3274",
+                        "endColumns": "100",
+                        "endOffsets": "3370"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\hp\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\2880db092bd038e1b8e89b6e43ceba1f\\res\\values-ca\\values-ca.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,223,329,436,519,627,753,837,918,1009,1102,1196,1291,1390,1483,1576,1670,1761,1852,1935,2046,2155,2253,2363,2467,2575,2735,2834",
+                        "endColumns": "117,105,106,82,107,125,83,80,90,92,93,94,98,92,92,93,90,90,82,110,108,97,109,103,107,159,98,80",
+                        "endOffsets": "218,324,431,514,622,748,832,913,1004,1097,1191,1286,1385,1478,1571,1665,1756,1847,1930,2041,2150,2248,2358,2462,2570,2730,2829,2910"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "150,268,374,481,564,672,798,882,963,1054,1147,1241,1336,1435,1528,1621,1715,1806,1897,1980,2091,2200,2298,2408,2512,2620,2780,3193",
+                        "endColumns": "117,105,106,82,107,125,83,80,90,92,93,94,98,92,92,93,90,90,82,110,108,97,109,103,107,159,98,80",
+                        "endOffsets": "263,369,476,559,667,793,877,958,1049,1142,1236,1331,1430,1523,1616,1710,1801,1892,1975,2086,2195,2293,2403,2507,2615,2775,2874,3269"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+#Sat Aug 10 16:39:35 BST 2019
+base.0=C\:\\Users\\hp\\Desktop\\AI\\Artificial Intelligence Projects\\Google AI tools\\TensorFlow-Lite-Image-Classifier\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex
