@@ -12,7 +12,7 @@ Using this App, we first select the Inception Quantized Classifier (a compressed
 
 ![](./TensorFlowLite.gif)
 
-If you are interested in testing out yourself the App, this is available to download [here](). <br>
+If you are interested in testing out yourself the App, this is available to download [here](https://github.com/pierpaolo28/Artificial-Intelligence-Projects/blob/master/Google%20AI%20tools/TensorFlow-Lite-Image-Classifier/AndroidImageClassifier.apk). <br>
 
 Some useful downloads used to create this project are:
 
