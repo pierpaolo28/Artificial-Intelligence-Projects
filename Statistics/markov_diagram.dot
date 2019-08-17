@@ -1,0 +1,22 @@
+digraph  {
+sleeping;
+eating;
+walking;
+playing;
+sleeping -> sleeping  [key=0, label="0.4", weight="0.4"];
+sleeping -> eating  [key=0, label="0.2", weight="0.2"];
+sleeping -> walking  [key=0, label="0.2", weight="0.2"];
+sleeping -> playing  [key=0, label="0.2", weight="0.2"];
+eating -> sleeping  [key=0, label="0.35", weight="0.35"];
+eating -> eating  [key=0, label="0.45", weight="0.45"];
+eating -> walking  [key=0, label="0.1", weight="0.1"];
+eating -> playing  [key=0, label="0.1", weight="0.1"];
+walking -> sleeping  [key=0, label="0.25", weight="0.25"];
+walking -> eating  [key=0, label="0.25", weight="0.25"];
+walking -> walking  [key=0, label="0.3", weight="0.3"];
+walking -> playing  [key=0, label="0.2", weight="0.2"];
+playing -> sleeping  [key=0, label="0.25", weight="0.25"];
+playing -> eating  [key=0, label="0.25", weight="0.25"];
+playing -> walking  [key=0, label="0.1", weight="0.1"];
+playing -> playing  [key=0, label="0.4", weight="0.4"];
+}

@@ -1,0 +1,20 @@
+digraph  {
+healthy;
+sick;
+sleeping;
+eating;
+walking;
+playing;
+healthy -> healthy  [key=0, label="0.7", weight="0.7"];
+healthy -> sick  [key=0, label="0.3", weight="0.3"];
+healthy -> sleeping  [key=0, label="0.2", weight="0.2"];
+healthy -> eating  [key=0, label="0.5", weight="0.5"];
+healthy -> walking  [key=0, label="0.1", weight="0.1"];
+healthy -> playing  [key=0, label="0.2", weight="0.2"];
+sick -> healthy  [key=0, label="0.4", weight="0.4"];
+sick -> sick  [key=0, label="0.6", weight="0.6"];
+sick -> sleeping  [key=0, label="0.4", weight="0.4"];
+sick -> eating  [key=0, label="0.1", weight="0.1"];
+sick -> walking  [key=0, label="0.3", weight="0.3"];
+sick -> playing  [key=0, label="0.2", weight="0.2"];
+}
