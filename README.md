@@ -13,3 +13,4 @@ Collection of Artificial Intelligence projects realised by me. Some of these top
 9. [Understanding Cancer Using Machine Learning](https://pierpaolo28.github.io/blog/blog8/)
 10. [Flask And Heroku For Online Machine Learning Deployement](https://pierpaolo28.github.io/blog/blog7/)
 11. [Computational Biology](https://pierpaolo28.github.io/blog/blog4/)
+12. [SQL For Data Science](https://pierpaolo28.github.io/blog/blog22/)
