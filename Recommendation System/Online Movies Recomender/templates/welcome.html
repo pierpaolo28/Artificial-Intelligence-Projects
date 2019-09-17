@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="google-site-verification"
+      content="Zkrpcge71CkhGPEkXP2eq2Bqe4Glh5q_uvpt2Ond624"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-138942304-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-138942304-1");
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="../static/Profile.ico"
+      type="image/x-icon"
+    />
+
+    <style>
+      .menu-btn {
+        position: absolute;
+        z-index: 3;
+        right: 35px;
+        top: 35px;
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+      }
+      .menu-btn .btn-line {
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        transition: all 0.5s ease-out;
+      }
+      .menu-btn.close {
+        transform: rotate(180deg);
+      }
+      .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0;
+      }
+      .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        opacity: 0.9;
+        visibility: hidden;
+      }
+      .menu.show {
+        visibility: visible;
+      }
+      .menu-branding,
+      .menu-nav {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .menu-nav {
+        margin: 0;
+        padding: 0;
+        background: #373737;
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        transition: all 0.5s ease-out;
+      }
+      .menu-nav.show {
+        transform: translate3d(0, 0, 0);
+      }
+      .menu-branding {
+        background: #444;
+        transform: translate3d(0, 100%, 0);
+        transition: all 0.5s ease-out;
+      }
+      .menu-branding.show {
+        transform: translate3d(0, 0, 0);
+      }
+      .menu-branding .portrait {
+        width: 250px;
+        height: 250px;
+        background: image-url("../static/profile.jpg");
+        border-radius: 50%;
+        border: solid 3px #1a87ee;
+      }
+      .menu .nav-item {
+        transform: translate3d(600px, 0, 0);
+        transition: all 0.5s ease-out;
+      }
+      .menu .nav-item.show {
+        transform: translate3d(0, 0, 0);
+      }
+      .menu .nav-item.current > a {
+        color: #1a87ee;
+      }
+      .menu .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.5s ease-out;
+      }
+      .menu .nav-link:hover {
+        color: #1a87ee;
+      }
+
+      .nav-item:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+
+      .nav-item:nth-child(2) {
+        transition-delay: 0.2s;
+      }
+
+      .nav-item:nth-child(3) {
+        transition-delay: 0.3s;
+      }
+
+      .nav-item:nth-child(4) {
+        transition-delay: 0.4s;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #444;
+        color: #fff;
+        height: 100%;
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.5;
+      }
+      body#bg-img {
+        background: image-url("back.jpeg");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      body#bg-img:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba(68, 68, 68, 0.3);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-weight: 400;
+      }
+      h1.lg-heading,
+      h2.lg-heading,
+      h3.lg-heading {
+        font-size: 6rem;
+      }
+      h1.sm-heading,
+      h2.sm-heading,
+      h3.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(73, 73, 73, 0.5);
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      header {
+        position: fixed;
+        z-index: 2;
+        width: 100%;
+      }
+
+      .text-secondary {
+        color: #1a87ee;
+      }
+
+      main {
+        padding: 4rem;
+        min-height: calc(100vh - 60px);
+      }
+      main .icons {
+        margin-top: 1rem;
+      }
+      main .icons a {
+        padding: 0.4rem;
+        transition: all 0.5s ease-out;
+      }
+      main .icons a:hover {
+        color: #1a87ee;
+      }
+      main#home {
+        overflow: hidden;
+      }
+      main#home h1 {
+        margin-top: 20vh;
+      }
+
+      .about-info {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .about-info .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: #1a87ee 3px solid;
+      }
+      .about-info .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+      }
+      .about-info .job-1 {
+        grid-area: job1;
+      }
+      .about-info .job-2 {
+        grid-area: job2;
+      }
+      .about-info .job-3 {
+        grid-area: job3;
+      }
+      .about-info .job {
+        background: #515151;
+        padding: 0.5rem;
+        border-bottom: #1a87ee 5px solid;
+      }
+
+      .projects {
+        display: grid;
+        grid-gap: 0.7rem;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .projects img {
+        width: 100%;
+        border: 3px #fff solid;
+      }
+      .projects img:hover {
+        opacity: 0.5;
+        border-color: #1a87ee;
+        transition: all 0.5s ease-out;
+      }
+
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      .boxes div {
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        transition: all 0.5s ease-out;
+      }
+      .boxes div:hover {
+        padding: 0.5rem 1.5rem;
+        background: #1a87ee;
+        color: #000;
+      }
+      .boxes div:hover span {
+        color: #000;
+      }
+
+      .btn,
+      .btn-dark,
+      .btn-light {
+        display: block;
+        padding: 0.5rem 1rem;
+        border: 0;
+        margin-bottom: 0.3rem;
+      }
+      .btn:hover,
+      .btn-dark:hover,
+      .btn-light:hover {
+        background: #1a87ee;
+        color: #000;
+      }
+
+      .btn-dark {
+        background: black;
+        color: #fff;
+      }
+
+      .btn-light {
+        background: #c4c4c4;
+        color: #333;
+      }
+
+      #main-footer {
+        text-align: center;
+        padding: 1rem;
+        background: #2b2b2b;
+        color: #fff;
+        height: 60px;
+      }
+
+      @media screen and (min-width: 1171px) {
+        .projects {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @media screen and (min-width: 769px) and (max-width: 1170px) {
+        .projects {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        main {
+          align-items: center;
+          text-align: center;
+        }
+        main .lg-heading {
+          line-height: 1;
+          margin-bottom: 1rem;
+        }
+        ul.menu-nav,
+        div.menu-branding {
+          float: none;
+          width: 100%;
+          min-height: 0;
+        }
+        ul.menu-nav.show,
+        div.menu-branding.show {
+          transform: translate3d(0, 0, 0);
+        }
+        .menu-nav {
+          height: 75vh;
+          transform: translate3d(-100%, 0, 0);
+          font-size: 24px;
+        }
+        .menu-branding {
+          height: 25vh;
+          transform: translate3d(100%, 0, 0);
+        }
+        .menu-branding .portrait {
+          background: image-url("../static/profile.jpg");
+          width: 150px;
+          height: 150px;
+        }
+        .about-info {
+          grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+          grid-template-columns: 1fr;
+        }
+        .projects {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        main {
+          padding: 2rem;
+        }
+        main #home h1 {
+          margin-top: 10vh;
+        }
+        main .lg-heading {
+          margin-top: 1rem;
+          font-size: 5rem;
+        }
+        .projects {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <title>Pier Paolo Ippolito</title>
+  </head>
+
+  <body id="bg-img">
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <nav class="menu">
+	          <div class="menu-branding">
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="https://pierpaolo28.github.io/index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="https://pierpaolo28.github.io/about.html" class="nav-link">
+              About Me
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="https://pierpaolo28.github.io/work.html" class="nav-link">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="https://pierpaolo28.github.io/contact.html"
+              class="nav-link"
+            >
+              How To Reach Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="login">
+	         <h1 class="lg-heading">
+          Programming <span class="text-secondary"> Projects</span>
+        </h1>
+        <h2 class="sm-heading" style="text-align:center;">
+          Online Movie Recomendation System
+        </h2>
+        <p>
+          Writing the title of your favourite movie in the box below and
+          pressing Enter, my recommendation engine will recommend you 10 movies
+          and give you a score of the likelihood you will like them. <br />
+          <br />
+
+          This Web App was realised using Python Flask and PythonAnywhere. The
+          database used to train this recommendation engine was a collection of
+          the top 250 rated movies from IMDB. This recommendation system uses
+          Cosine Similariy in order to make its predictions and the data
+          preprocessing has been handled using Natural Language Processing
+          (NLP).
+        </p>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('recommendation') }}" method="post">
+          <input
+            type="text"
+            name="experience"
+            placeholder="Movie Title"
+            required="required"
+          />
+          <br />
+          <br />
+          <button type="submit" class="btn btn-primary btn-block btn-large">
+            Enter
+          </button>
+        </form>
+
+        <br />
+        <br />
+        <center>
+          {{ prediction_text }}
+        </center>
+        <br />
+        <br />
+      </div>
+
+      <!-- Adding comments section -->
+      <div id="disqus_thread"></div>
+      <script>
+        (function() {
+          // DON'T EDIT BELOW THIS LINE
+          var d = document,
+            s = d.createElement("script");
+          s.src = "https://pier-paolo-website.disqus.com/embed.js";
+          s.setAttribute("data-timestamp", +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript
+        >Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript"
+          >comments powered by Disqus.</a
+        ></noscript
+      >
+    </main>
+
+    <footer id="main-footer">
+      Copyright &copy; 2019
+    </footer>
+
+    <script>
+      // Select DOM Items
+      const menuBtn = document.querySelector(".menu-btn");
+      const menu = document.querySelector(".menu");
+      const menuNav = document.querySelector(".menu-nav");
+      const menuBranding = document.querySelector(".menu-branding");
+      const navItems = document.querySelectorAll(".nav-item");
+
+      // Set Initial State Of Menu
+      let showMenu = false;
+
+      menuBtn.addEventListener("click", toggleMenu);
+
+      function toggleMenu() {
+        if (!showMenu) {
+          menuBtn.classList.add("close");
+          menu.classList.add("show");
+          menuNav.classList.add("show");
+          menuBranding.classList.add("show");
+          navItems.forEach(item => item.classList.add("show"));
+
+          // Set Menu State
+          showMenu = true;
+        } else {
+          menuBtn.classList.remove("close");
+          menu.classList.remove("show");
+          menuNav.classList.remove("show");
+          menuBranding.classList.remove("show");
+          navItems.forEach(item => item.classList.remove("show"));
+
+          // Set Menu State
+          showMenu = false;
+        }
+      }
+    </script>
+  </body>
+</html>
