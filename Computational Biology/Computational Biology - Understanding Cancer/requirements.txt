@@ -1,0 +1,6 @@
+matplotlib==3.1.2
+numpy==1.17.4
+lightgbm==2.3.1
+pandas==1.0.3
+scikit_learn==0.22.2.post1
+seaborn==0.10.0
