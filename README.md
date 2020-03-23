@@ -1,3 +1,8 @@
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # Artificial-Intelligence-Projects
 
 Collection of Artificial Intelligence projects realised by me. Some of these topics have been covered in my personal blog: <br>
@@ -14,3 +19,15 @@ Collection of Artificial Intelligence projects realised by me. Some of these top
 10. [Flask And Heroku For Online Machine Learning Deployement](https://pierpaolo28.github.io/blog/blog7/)
 11. [Computational Biology](https://pierpaolo28.github.io/blog/blog4/)
 12. [SQL For Data Science](https://pierpaolo28.github.io/blog/blog22/)
+
+[contributors-shield]: https://img.shields.io/github/contributors/pierpaolo28/Artificial-Intelligence-Projects.svg?style=flat-square
+[contributors-url]: https://github.com/pierpaolo28/Artificial-Intelligence-Projects/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/pierpaolo28/Artificial-Intelligence-Projects.svg?style=flat-square
+[forks-url]: https://github.com/pierpaolo28/Artificial-Intelligence-Projects/network/members
+[stars-shield]: https://img.shields.io/github/stars/pierpaolo28/Artificial-Intelligence-Projects.svg?style=flat-square
+[stars-url]: https://github.com/pierpaolo28/Artificial-Intelligence-Projects/stargazers
+[issues-shield]: https://img.shields.io/github/issues/pierpaolo28/Artificial-Intelligence-Projects.svg?style=flat-square
+[issues-url]: https://github.com/pierpaolo28/Artificial-Intelligence-Projects/issues
+[license-shield]: https://img.shields.io/github/license/pierpaolo28/Artificial-Intelligence-Projects.svg?style=flat-square
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/pierpaolo28/
