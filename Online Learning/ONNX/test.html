@@ -1,0 +1,110 @@
+<html>
+  <body>
+    <canvas
+      id="canvas"
+      width="80"
+      height="80"
+      style="border: 1px solid #d3d3d3;"
+    ></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <script>
+      async function test() {
+        const sess = new onnx.InferenceSession();
+        await sess.loadModel("./onnx_model.onnx");
+        const input = new onnx.Tensor(
+          new Float32Array(280 * 280 * 4),
+          "float32",
+          [280 * 280 * 4]
+        );
+        var arr = [];
+        for (var i = 0; i < 20; i++) {
+          arr.push(
+            (Math.random() +
+              Math.random() +
+              Math.random() +
+              Math.random() +
+              Math.random() +
+              Math.random() -
+              3) /
+              3
+          );
+        }
+        const arr2 = new onnx.Tensor(arr, "float32", [1, 20]);
+        const outputMap = await sess.run([input, arr2]);
+        var outputTensor = outputMap.values().next().value;
+        console.log(`Output tensor: ${outputTensor.data.length}`);
+
+        // var c = document.getElementById("canvas2");
+        // var ctx = c.getContext("2d");
+        // var palette = ctx.getImageData(0, 0, 20, 20); //x,y,w,h
+        // palette.data.set(new Uint8ClampedArray(outputTensor.data));
+        // ctx.putImageData(palette, 0, 0);
+        // console.log(`Output tensor: ${palette.data}`);
+
+        function splitArray(array, part) {
+          var tmp = [];
+          for (var i = 0; i < array.length; i += part) {
+            tmp.push(array.slice(i, i + part));
+          }
+          return tmp;
+        }
+        var arr1 = splitArray(outputTensor.data, 28);
+
+        var ctx = document.getElementById("canvas").getContext("2d");
+
+        var height = arr1.length;
+        var width = arr1[0].length;
+
+        var h = ctx.canvas.height;
+        var w = ctx.canvas.width;
+
+        var imgData = ctx.getImageData(0, 0, w, h);
+        var data = imgData.data; // the array of RGBA values
+
+        for (var i = 0; i < height; i++) {
+          for (var j = 0; j < width; j++) {
+            var s = 4 * i * w + 4 * j; // calculate the index in the array
+            var x = arr1[i][j]; // the RGB values
+            //console.log(`Output tensor: ${x}`);
+            data[s] = x;
+            data[s + 1] = x;
+            data[s + 2] = x;
+            data[s + 3] = 255; // fully opaque
+          }
+        }
+
+        ctx.putImageData(imgData, 0, 0);
+
+        // function splitArray(array, part) {
+        //   var tmp = [];
+        //   for (var i = 0; i < array.length; i += part) {
+        //     tmp.push(array.slice(i, i + part));
+        //   }
+        //   return tmp;
+        // }
+        // var row = splitArray(outputTensor.data, 28);
+        // console.log(`Output tensor: ${row.length}`);
+        // var c = document.getElementById("canvas2");
+        // var ctx = c.getContext("2d");
+        // var palette = ctx.getImageData(0, 0, 20, 20); //x,y,w,h
+        // palette.data.set(new Uint8ClampedArray(outputTensor.data));
+        // ctx.putImageData(palette, 0, 0);
+        // console.log(`Output tensor: ${palette.data}`);
+        // document.write(outputTensor.data.outerHTML);
+
+        // var myList = "<ul>";
+        // for (var i = 0; i < row.length; i++) {
+        //   //   var x = row[i].toString();
+        //   console.log(`Output tensor: ${row[i].length}`);
+        //   //   document.getElementById("demo").innerHTML =
+        //   //     row[i].toString() + "<br />";
+        //   myList += "<li>" + row[i].toString() + "</li>";
+        // }
+        // myList += "</ul>";
+        // document.getElementById("demo").innerHTML = myList;
+      }
+      test();
+    </script>
+    <!-- <p id="demo"></p> -->
+  </body>
+</html>
