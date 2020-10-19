@@ -1,461 +1,694 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="google-site-verification"
-      content="Zkrpcge71CkhGPEkXP2eq2Bqe4Glh5q_uvpt2Ond624"
-    />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-138942304-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-138942304-1");
-    </script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+<html lang="en-US">
 
-    <link
-      rel="shortcut icon"
-      href="../static/Profile.ico"
-      type="image/x-icon"
-    />
+<head>
+  <meta charset="utf-8">
+  <meta name="google-site-verification" content="Zkrpcge71CkhGPEkXP2eq2Bqe4Glh5q_uvpt2Ond624" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-138942304-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-    <style>
-      .menu-btn {
-        position: absolute;
-        z-index: 3;
-        right: 35px;
-        top: 35px;
-        cursor: pointer;
-        transition: all 0.5s ease-out;
-      }
-      .menu-btn .btn-line {
-        width: 28px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background: #fff;
-        transition: all 0.5s ease-out;
-      }
-      .menu-btn.close {
-        transform: rotate(180deg);
-      }
-      .menu-btn.close .btn-line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-      }
-      .menu-btn.close .btn-line:nth-child(2) {
-        opacity: 0;
-      }
-      .menu-btn.close .btn-line:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "UA-138942304-1");
+  </script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.6.1 -->
+  <title>Online Movie Recomendation System | Pier Paolo Ippolito</title>
+  <meta name="generator" content="Jekyll v3.9.0" />
+  <meta property="og:title" content="Online Movie Recomendation System" />
+  <meta name="author" content="pierpaolo28" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="description" content="Online Recommendation System for films deployed with Flask on pythonanywhere" />
+  <meta property="og:description" content="Online Recommendation System for films deployed with Flask on pythonanywhere" />
+  <link rel="canonical" href="http://pierpaolo28.pythonanywhere.com/" />
+  <meta property="og:url" content="http://pierpaolo28.pythonanywhere.com/" />
+  <meta property="og:site_name" content="Pier Paolo Ippolito" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2019-10-18T00:00:00+00:00" />
+  <script type="application/ld+json">
+    {
+      "dateModified": "2019-12-27T00:00:00+00:00",
+      "datePublished": "2019-12-27T00:00:00+00:00",
+      "headline": "Online Movie Recomendation System",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://pierpaolo28.pythonanywhere.com/"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "pierpaolo28"
+      },
+      "description": "Online Recommendation System for films deployed with Flask on pythonanywhere",
+      "url": "http://pierpaolo28.pythonanywhere.com/",
+      "@type": "BlogPosting",
+      "@context": "https://schema.org"
+    }
+  </script> <!-- End Jekyll SEO tag -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png?v=qA3OXqyw77">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png?v=qA3OXqyw77">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png?v=qA3OXqyw77">
+  <link rel="manifest" href="/static/manifest.json?v=qA3OXqyw77">
+  <link rel="mask-icon" href="/static/safari-pinned-tab.svg?v=qA3OXqyw77" color="#5bbad5">
+  <!--[if IE]><link rel="shortcut icon" href="/assets/img/icons/favicon.ico?v=qA3OXqyw77"><![endif]-->
+  <link rel="shortcut icon" href="/static/favicon.ico?v=qA3OXqyw77">
+  <meta name="apple-mobile-web-app-title" content="Sleek">
+  <meta name="application-name" content="Sleek">
+  <meta name="msapplication-config" content="/static/browserconfig.xml?v=qA3OXqyw77">
+  <meta name="theme-color" content="#ffffff">
+  <style class="inlineCSS">
+    h1 {
+      color: #313237;
+      margin-top: 0;
+      margin-bottom: .5rem
+    }
+
+    .dark-bg {
+      background-color: #313237
+    }
+
+    @media only screen and (min-width:48em) {
+      .post-card {
+        width: 48.4375%;
+        margin-right: 3.125%
       }
 
-      .menu {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        opacity: 0.9;
-        visibility: hidden;
+      .post-card:last-of-type,
+      .post-card:nth-child(2n+2) {
+        margin-right: 0
       }
-      .menu.show {
-        visibility: visible;
+    }
+
+    html {
+      line-height: 1.15;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      margin: 0
+    }
+
+    header,
+    nav,
+    section {
+      display: block
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: .67em 0
+    }
+
+    figure,
+    main {
+      display: block
+    }
+
+    figure {
+      margin: 1em 40px
+    }
+
+    a {
+      background-color: transparent;
+      -webkit-text-decoration-skip: objects
+    }
+
+    img {
+      border-style: none
+    }
+
+    svg:not(:root) {
+      overflow: hidden
+    }
+
+    ::-webkit-file-upload-button {
+      -webkit-appearance: button;
+      font: inherit
+    }
+
+    html {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box
+    }
+
+    body {
+      -webkit-overflow-scrolling: touch
+    }
+
+    *,
+    ::after,
+    ::before {
+      -webkit-box-sizing: inherit;
+      box-sizing: inherit
+    }
+
+    .site {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 100vh;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column
+    }
+
+    .site__content {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      width: auto;
+      vertical-align: middle
+    }
+
+    figure {
+      margin: 0
+    }
+
+    body {
+      background-color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #343851;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 1.25rem
+    }
+
+    h1,
+    h2 {
+      color: #313237;
+      margin-top: 0;
+      margin-bottom: .5rem
+    }
+
+    a {
+      color: #277cea;
+      text-decoration: none;
+      border-bottom: 1px dashed #277cea
+    }
+
+    .blur {
+      background: #fff;
+      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="16" /></filter></svg>#filter');
+      -webkit-filter: blur(1rem);
+      filter: blur(1rem)
+    }
+
+    .container {
+      padding: 0 20px;
+      max-width: 100%;
+      margin: 0 auto
+    }
+
+    @media only screen and (min-width:36em) {
+      .container {
+        max-width: 540px;
+        margin: 0 auto
       }
-      .menu-branding,
-      .menu-nav {
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        justify-content: center;
-        float: left;
-        width: 50%;
-        height: 100vh;
-        overflow: hidden;
+    }
+
+    @media only screen and (min-width:48em) {
+      .container {
+        max-width: 720px;
+        margin: 0 auto
       }
-      .menu-nav {
-        margin: 0;
+    }
+
+    @media only screen and (min-width:62em) {
+      .container {
+        max-width: 960px;
+        margin: 0 auto
+      }
+    }
+
+    @media only screen and (min-width:75em) {
+      .container {
+        max-width: 1170px;
+        margin: 0 auto
+      }
+    }
+
+    .header {
+      background-color: #fff;
+      color: #343851;
+      position: absolute;
+      z-index: 4;
+      width: 100%;
+      top: 0;
+      left: 0;
+      will-change: transform;
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+    }
+
+    .header a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      border-bottom: 0
+    }
+
+    .header__logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      overflow: hidden;
+      padding: 19px 0;
+      margin-right: 1.25rem;
+      outline: 0;
+      border-bottom: 0;
+      color: #313237
+    }
+
+    .header__logo .header__logo--container {
+      width: 58px
+    }
+
+    .header__logo .header__logo--container .logo {
+      fill: currentColor
+    }
+
+    .header__inner {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      height: 3.75em;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between
+    }
+
+    .header__links {
+      padding-bottom: .5rem;
+      display: none;
+      position: absolute;
+      top: 3.75em;
+      left: 0;
+      width: 100%;
+      height: auto;
+      background: #fff
+    }
+
+    .header__link {
+      color: #343851;
+      padding: .938rem 0;
+      border-top: 1px solid #ededed
+    }
+
+    .header__toggle {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      width: 44px;
+      height: 100%;
+      background-color: transparent;
+      padding-left: 1.25rem
+    }
+
+    .header__toggle span {
+      display: block;
+      position: relative;
+      margin-top: 4px;
+      background-color: #343851;
+      width: 100%;
+      height: 2px;
+      border-radius: 1px
+    }
+
+    .header__toggle span:first-child {
+      margin-top: 0
+    }
+
+    @media (min-width:62em) {
+      .header__toggle {
+        display: none;
+        visibility: hidden
+      }
+
+      .header__links {
+        position: static;
         padding: 0;
-        background: #373737;
-        list-style: none;
-        transform: translate3d(0, -100%, 0);
-        transition: all 0.5s ease-out;
-      }
-      .menu-nav.show {
-        transform: translate3d(0, 0, 0);
-      }
-      .menu-branding {
-        background: #444;
-        transform: translate3d(0, 100%, 0);
-        transition: all 0.5s ease-out;
-      }
-      .menu-branding.show {
-        transform: translate3d(0, 0, 0);
-      }
-      .menu-branding .portrait {
-        width: 250px;
-        height: 250px;
-        background: image-url("../static/profile.jpg");
-        border-radius: 50%;
-        border: solid 3px #1a87ee;
-      }
-      .menu .nav-item {
-        transform: translate3d(600px, 0, 0);
-        transition: all 0.5s ease-out;
-      }
-      .menu .nav-item.show {
-        transform: translate3d(0, 0, 0);
-      }
-      .menu .nav-item.current > a {
-        color: #1a87ee;
-      }
-      .menu .nav-link {
-        display: inline-block;
-        position: relative;
-        font-size: 30px;
-        text-transform: uppercase;
-        padding: 1rem 0;
-        font-weight: 300;
-        color: #fff;
-        text-decoration: none;
-        transition: all 0.5s ease-out;
-      }
-      .menu .nav-link:hover {
-        color: #1a87ee;
-      }
-
-      .nav-item:nth-child(1) {
-        transition-delay: 0.1s;
-      }
-
-      .nav-item:nth-child(2) {
-        transition-delay: 0.2s;
-      }
-
-      .nav-item:nth-child(3) {
-        transition-delay: 0.3s;
-      }
-
-      .nav-item:nth-child(4) {
-        transition-delay: 0.4s;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        background: #444;
-        color: #fff;
-        height: 100%;
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.5;
-      }
-      body#bg-img {
-        background: image-url("back.jpeg");
-        background-attachment: fixed;
-        background-size: cover;
-      }
-      body#bg-img:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        background: rgba(68, 68, 68, 0.3);
-      }
-
-      h1,
-      h2,
-      h3 {
-        margin: 0;
-        font-weight: 400;
-      }
-      h1.lg-heading,
-      h2.lg-heading,
-      h3.lg-heading {
-        font-size: 6rem;
-      }
-      h1.sm-heading,
-      h2.sm-heading,
-      h3.sm-heading {
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(73, 73, 73, 0.5);
-      }
-
-      a {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      header {
-        position: fixed;
-        z-index: 2;
-        width: 100%;
-      }
-
-      .text-secondary {
-        color: #1a87ee;
-      }
-
-      main {
-        padding: 4rem;
-        min-height: calc(100vh - 60px);
-      }
-      main .icons {
-        margin-top: 1rem;
-      }
-      main .icons a {
-        padding: 0.4rem;
-        transition: all 0.5s ease-out;
-      }
-      main .icons a:hover {
-        color: #1a87ee;
-      }
-      main#home {
-        overflow: hidden;
-      }
-      main#home h1 {
-        margin-top: 20vh;
-      }
-
-      .about-info {
-        display: grid;
-        grid-gap: 30px;
-        grid-template-areas: "bioimage bio bio" "job1 job2 job3";
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .about-info .bio-image {
-        grid-area: bioimage;
-        margin: auto;
-        border-radius: 50%;
-        border: #1a87ee 3px solid;
-      }
-      .about-info .bio {
-        grid-area: bio;
-        font-size: 1.5rem;
-      }
-      .about-info .job-1 {
-        grid-area: job1;
-      }
-      .about-info .job-2 {
-        grid-area: job2;
-      }
-      .about-info .job-3 {
-        grid-area: job3;
-      }
-      .about-info .job {
-        background: #515151;
-        padding: 0.5rem;
-        border-bottom: #1a87ee 5px solid;
-      }
-
-      .projects {
-        display: grid;
-        grid-gap: 0.7rem;
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .projects img {
-        width: 100%;
-        border: 3px #fff solid;
-      }
-      .projects img:hover {
-        opacity: 0.5;
-        border-color: #1a87ee;
-        transition: all 0.5s ease-out;
-      }
-
-      .boxes {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 1rem;
-      }
-      .boxes div {
-        font-size: 2rem;
-        border: 3px #fff solid;
-        padding: 1.5rem 2.5rem;
-        margin-bottom: 3rem;
-        transition: all 0.5s ease-out;
-      }
-      .boxes div:hover {
-        padding: 0.5rem 1.5rem;
-        background: #1a87ee;
-        color: #000;
-      }
-      .boxes div:hover span {
-        color: #000;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        visibility: visible;
+        width: auto;
+        height: 100%
       }
 
-      .btn,
-      .btn-dark,
-      .btn-light {
-        display: block;
-        padding: 0.5rem 1rem;
+      .header__links-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 100%;
+        padding: 0
+      }
+
+      .header__link {
+        position: relative;
+        padding: .938rem 1rem;
         border: 0;
-        margin-bottom: 0.3rem;
-      }
-      .btn:hover,
-      .btn-dark:hover,
-      .btn-light:hover {
-        background: #1a87ee;
-        color: #000;
+        height: 100%
       }
 
-      .btn-dark {
-        background: black;
-        color: #fff;
+      .header__link::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        background: #277cea
+      }
+    }
+
+    .post-card {
+      display: block;
+      position: relative;
+      width: 100%;
+      min-height: 250px;
+      border-radius: 4px;
+      overflow: hidden;
+      background-color: #fff;
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+      margin-bottom: 2.25rem;
+      border-bottom: 0
+    }
+
+    @media only screen and (min-width:48em) {
+      .post-card {
+        width: 48.4375%;
+        margin-right: 3.125%
       }
 
-      .btn-light {
-        background: #c4c4c4;
-        color: #333;
+      .post-card:nth-child(2n+2) {
+        margin-right: 0
+      }
+    }
+
+    @media only screen and (min-width:75em) {
+      .post-card {
+        width: 31.25%;
+        margin-right: 3.125%
       }
 
-      #main-footer {
-        text-align: center;
-        padding: 1rem;
-        background: #2b2b2b;
-        color: #fff;
-        height: 60px;
+      .post-card:nth-child(2n+2) {
+        margin-right: 3.125%
+      }
+    }
+
+    .post-card__label {
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+      z-index: 2
+    }
+
+    .post-card__inner {
+      display: block;
+      position: relative;
+      padding: 1.875rem 1.25rem .625rem;
+      width: 100%;
+      color: #838c8d;
+      border-bottom: 0
+    }
+
+    .post-card__header {
+      margin-bottom: .75rem
+    }
+
+    .post-card__meta {
+      font-size: .875rem
+    }
+
+    .post-card__thumb {
+      margin: 0;
+      background: #fff;
+      position: relative;
+      overflow: hidden
+    }
+
+    .post-card__thumb::after {
+      content: "";
+      display: block;
+      height: 0;
+      width: 100%;
+      padding-bottom: 56.25%
+    }
+
+    .post-card__thumb>* {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block
+    }
+
+    .label {
+      padding: 0 10px;
+      margin-bottom: 1rem;
+      display: inline-block;
+      line-height: 20px;
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(255, 255, 255, .8);
+      border: 2px solid rgba(255, 255, 255, .5);
+      border-radius: 100px
+    }
+
+    .hero {
+      margin: 3.75rem auto 0;
+      min-height: 16.25rem;
+      width: 100%;
+      position: relative;
+      background-color: #dde5ea;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: cover
+    }
+
+    @media only screen and (min-width:62em) {
+      .hero {
+        margin: 0 auto;
+        height: 36em
+      }
+    }
+
+    .hero::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(52, 56, 81, .8)
+    }
+
+    .hero__wrap {
+      position: absolute;
+      margin: auto;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: rgba(255, 255, 255, .8);
+      width: 100%;
+      max-width: 90%;
+      z-index: 1
+    }
+
+    .hero__wrap .hero__title {
+      font-size: 1.8em;
+      color: #fff
+    }
+
+    .blog {
+      background-color: #f9f9f9
+    }
+
+    .post-list {
+      padding-top: 2.5em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+      flex: 1 0 auto
+    }
+
+    @media only screen and (min-width:48em) {
+      .hero__wrap {
+        max-width: 40em
       }
 
-      @media screen and (min-width: 1171px) {
-        .projects {
-          grid-template-columns: repeat(4, 1fr);
-        }
+      .hero__wrap .hero__title {
+        padding: 1rem 0;
+        font-size: 2.625em;
+        line-height: 3.125rem
       }
 
-      @media screen and (min-width: 769px) and (max-width: 1170px) {
-        .projects {
-          grid-template-columns: repeat(3, 1fr);
+      .post-list {
+        padding-top: 5em
+      }
+    }
+  </style>
+  <link rel="preload" href="/static/css/main.css" as="style" onload="this.rel='stylesheet'"> <noscript>
+    <link rel="stylesheet" href="/static/css/main.css"></noscript>
+  <script type="text/javascript">
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    (function(w) {
+      "use strict";
+      if (!w.loadCSS) {
+        w.loadCSS = function() {}
+      }
+      var rp = loadCSS.relpreload = {};
+      rp.support = (function() {
+        var ret;
+        try {
+          ret = w.document.createElement("link").relList.supports("preload")
+        } catch (e) {
+          ret = !1
+        }
+        return function() {
+          return ret
+        }
+      })();
+      rp.bindMediaToggle = function(link) {
+        var finalMedia = link.media || "all";
+
+        function enableStylesheet() {
+          link.media = finalMedia
+        }
+        if (link.addEventListener) {
+          link.addEventListener("load", enableStylesheet)
+        } else if (link.attachEvent) {
+          link.attachEvent("onload", enableStylesheet)
+        }
+        setTimeout(function() {
+          link.rel = "stylesheet";
+          link.media = "only x"
+        });
+        setTimeout(enableStylesheet, 3000)
+      };
+      rp.poly = function() {
+        if (rp.support()) {
+          return
+        }
+        var links = w.document.getElementsByTagName("link");
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+          if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+            link.setAttribute("data-loadcss", !0);
+            rp.bindMediaToggle(link)
+          }
+        }
+      };
+      if (!rp.support()) {
+        rp.poly();
+        var run = w.setInterval(rp.poly, 500);
+        if (w.addEventListener) {
+          w.addEventListener("load", function() {
+            rp.poly();
+            w.clearInterval(run)
+          })
+        } else if (w.attachEvent) {
+          w.attachEvent("onload", function() {
+            rp.poly();
+            w.clearInterval(run)
+          })
         }
       }
-
-      @media screen and (max-width: 768px) {
-        main {
-          align-items: center;
-          text-align: center;
-        }
-        main .lg-heading {
-          line-height: 1;
-          margin-bottom: 1rem;
-        }
-        ul.menu-nav,
-        div.menu-branding {
-          float: none;
-          width: 100%;
-          min-height: 0;
-        }
-        ul.menu-nav.show,
-        div.menu-branding.show {
-          transform: translate3d(0, 0, 0);
-        }
-        .menu-nav {
-          height: 75vh;
-          transform: translate3d(-100%, 0, 0);
-          font-size: 24px;
-        }
-        .menu-branding {
-          height: 25vh;
-          transform: translate3d(100%, 0, 0);
-        }
-        .menu-branding .portrait {
-          background: image-url("../static/profile.jpg");
-          width: 150px;
-          height: 150px;
-        }
-        .about-info {
-          grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-          grid-template-columns: 1fr;
-        }
-        .projects {
-          grid-template-columns: repeat(2, 1fr);
-        }
+      if (typeof exports !== "undefined") {
+        exports.loadCSS = loadCSS
+      } else {
+        w.loadCSS = loadCSS
       }
+    }(typeof global !== "undefined" ? global : this))
+  </script>
+</head>
 
-      @media screen and (max-width: 500px) {
-        main {
-          padding: 2rem;
-        }
-        main #home h1 {
-          margin-top: 10vh;
-        }
-        main .lg-heading {
-          margin-top: 1rem;
-          font-size: 5rem;
-        }
-        .projects {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-    <title>Pier Paolo Ippolito</title>
-  </head>
-
-  <body id="bg-img">
-    <header>
-      <div class="menu-btn">
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
-        <div class="btn-line"></div>
+<body class="site">
+  <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+    <div class="container">
+      <div class="header__inner"> <a class="header__logo" href="/">
+          <div class="header__logo--container"> <svg class="logo" viewBox="0 0 90 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+              <g transform="translate(0.000000,46.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                <path
+                  d="M100 332 c0 -5 21 -9 48 -8 62 1 142 -29 142 -54 0 -13 -16 -24 -55 -39 -77 -29 -78 -29 -72 29 3 28 2 50 -2 50 -5 0 -11 -23 -14 -52 -4 -28 -12 -55 -19 -60 -10 -6 -10 -8 0 -8 6 0 12 -9 12 -19 0 -11 3 -26 6 -35 11 -29 20 -17 16 22 l-4 38 55 17 c31 10 66 26 79 37 l23 20 -28 25 c-15 13 -44 29 -65 34 -45 13 -122 14 -122 3z" />
+                <path
+                  d="M417 333 c-3 -5 20 -9 51 -9 63 0 137 -29 137 -54 0 -16 -51 -43 -102 -54 l-32 -7 6 52 c5 38 3 50 -5 45 -7 -4 -12 -26 -12 -50 0 -23 -5 -47 -12 -54 -9 -9 -9 -12 0 -12 7 0 12 -13 12 -29 0 -17 4 -32 9 -35 5 -4 7 11 4 33 -5 37 -4 39 28 46 18 4 53 16 77 26 55 24 55 53 0 82 -41 21 -152 35 -161 20z" />
+                <path d="M777 333 c-10 -9 -9 -191 1 -196 4 -3 8 42 9 99 1 57 0 104 -1 104 -2 0 -6 -3 -9 -7z" />
+                <path d="M350 145 c0 -9 5 -15 11 -13 6 2 11 8 11 13 0 5 -5 11 -11 13 -6 2 -11 -4 -11 -13z" />
+                <path d="M666 153 c-11 -11 -6 -23 9 -23 8 0 15 4 15 9 0 13 -16 22 -24 14z" />
+                <path d="M867 154 c-8 -8 1 -24 14 -24 5 0 9 7 9 15 0 15 -12 20 -23 9z" />
+              </g>
+            </svg></div>
+        </a>
+        <nav class="header__links">
+          <div class="container header__links-wrapper"> <a class="header__link" href="https://pierpaolo28.github.io/" itemprop="url"> <span itemprop="name">Home</span> </a> <a class="header__link" href="https://pierpaolo28.github.io/work.html"
+              itemprop="url"> <span itemprop="name">Projects</span> </a> <a class="header__link" href="https://pierpaolo28.github.io/blog" itemprop="url"> <span itemprop="name">Blog</span> </a> <a class="header__link"
+              href="https://pierpaolo28.github.io/blog/tips" itemprop="url"> <span itemprop="name">Tips</span> </a> <a class="header__link" href="https://pierpaolo28.github.io/blog/books" itemprop="url"> <span itemprop="name">Books</span> </a> <a
+              class="header__link" href="https://pierpaolo28.github.io/about" itemprop="url"> <span itemprop="name">About</span> </a> <a class="header__link" href="https://pierpaolo28.github.io/contact" itemprop="url"> <span
+                itemprop="name">Contact</span> </a></div>
+        </nav>
+        <div class="header__toggle"> <span></span> <span></span> <span></span></div>
       </div>
-
-      <nav class="menu">
-	          <div class="menu-branding">
-        </div>
-        <ul class="menu-nav">
-          <li class="nav-item">
-            <a href="https://pierpaolo28.github.io/index.html" class="nav-link">
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="https://pierpaolo28.github.io/about.html" class="nav-link">
-              About Me
-            </a>
-          </li>
-          <li class="nav-item current">
-            <a href="https://pierpaolo28.github.io/work.html" class="nav-link">
-              My Work
-            </a>
-          </li>
-          <li class="nav-item">
-            <a
-              href="https://pierpaolo28.github.io/contact.html"
-              class="nav-link"
-            >
-              How To Reach Me
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main>
-      <div class="login">
-	         <h1 class="lg-heading">
-          Programming <span class="text-secondary"> Projects</span>
-        </h1>
-        <h2 class="sm-heading" style="text-align:center;">
-          Online Movie Recomendation System
-        </h2>
+    </div>
+  </header>
+  <div class="hero lazyload" data-bg="/static/rs.jpg">
+    <div class="hero__wrap">
+      <div class="hero__categories"> <a class="label" href="https://pierpaolo28.github.io/tags/#Machine Learning">Machine
+          Learning</a> </div>
+      <h1 class="hero__title">Online Movie Recomendation System</h1>
+      <p class="hero__meta"> <span> <time>18 Oct 2019</time> </span></p>
+    </div>
+  </div>
+  <main class="site__content">
+    <div class="container">
+      <article class="post-content" itemprop="articleBody">
         <p>
           Writing the title of your favourite movie in the box below and
           pressing Enter, my recommendation engine will recommend you 10 movies
@@ -471,86 +704,126 @@
         </p>
         <!-- Main Input For Receiving Query to our ML -->
         <form action="{{ url_for('recommendation') }}" method="post">
-          <input
-            type="text"
-            name="experience"
-            placeholder="Movie Title"
-            required="required"
-          />
+          <input type="text" name="experience" placeholder="Movie Title" required="required" />
           <br />
           <br />
           <button type="submit" class="btn btn-primary btn-block btn-large">
             Enter
           </button>
         </form>
-
         <br />
         <br />
         <center>
           {{ prediction_text }}
         </center>
-        <br />
-        <br />
+        <p></p>
+        <h2>Contacts</h2>
+        <p>If you want to keep updated with my latest articles and projects <a href="https://medium.com/@pierpaoloippolito28?source=post_page---------------------------" target="_blank" rel="noopener noreferrer">follow me on Medium</a> and subscribe
+          to my <a href="http://eepurl.com/gwO-Dr?source=post_page---------------------------" target="_blank" rel="noopener noreferrer">mailing list</a>. These are some of my contacts details:</p>
+        <ul>
+          <li><a href="https://uk.linkedin.com/in/pier-paolo-ippolito-202917146?source=post_page---------------------------" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.patreon.com/user?u=32155890" target="_blank" rel="noopener noreferrer">Patreon</a></li>
+          <li><a href="https://towardsdatascience.com/@pierpaoloippolito28?source=post_page---------------------------" target="_blank" rel="noopener noreferrer">Medium Profile</a></li>
+          <li><a href="https://github.com/pierpaolo28?source=post_page---------------------------" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.kaggle.com/pierpaolo28?source=post_page---------------------------" target="_blank" rel="noopener noreferrer">Kaggle</a></li>
+        </ul>
+      </article>
+      <div class="post-content controls__inner">
+        <div class="controls__item prev"> <span>Previous</span> <a href="https://pierpaolo28.github.io/Projects/project16.html"> <span> <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                <path fill="fillColor" d="M5.647 1.718c.37-.434.323-1.09-.106-1.465A1.016 1.016 0 0 0 4.095.36L.25 4.875a1.05 1.05 0 0 0 .017 1.378l3.95 4.407c.38.424 1.03.456 1.448.07a1.05 1.05 0 0 0 .07-1.468l-3.34-3.725 3.253-3.819z" /> </svg>
+            </span> Introduction to AI powered Microsoft Tools (Mic... </a></div>
+        <div class="controls__item next"> <span>Next</span> <a href="https://sleepy-hamlet-89494.herokuapp.com/"> Streamlit Business Insights WebApp... <span> <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11">
+                <path fill="#fillColor" d="M.353 9.282c-.37.434-.323 1.09.106 1.465a1.016 1.016 0 0 0 1.446-.107L5.75 6.125a1.05 1.05 0 0 0-.017-1.378L1.784.34A1.015 1.015 0 0 0 .336.27a1.05 1.05 0 0 0-.07 1.468l3.34 3.725L.353 9.282z" /> </svg>
+            </span> </a></div>
       </div>
+    </div>
+    <div class="comments">
+      <div class="container">
+        <div class="post-content">
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+          <style type="text/css">
+            #mc_embed_signup {
+              background: #fff;
+              clear: left;
+              font: 14px Helvetica, Arial, sans-serif;
+            }
 
-      <!-- Adding comments section -->
-      <div id="disqus_thread"></div>
-      <script>
-        (function() {
-          // DON'T EDIT BELOW THIS LINE
-          var d = document,
-            s = d.createElement("script");
-          s.src = "https://pier-paolo-website.disqus.com/embed.js";
-          s.setAttribute("data-timestamp", +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript
-        >Please enable JavaScript to view the
-        <a href="https://disqus.com/?ref_noscript"
-          >comments powered by Disqus.</a
-        ></noscript
-      >
-    </main>
+            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block. We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+          </style>
+          <div id="mc_embed_signup">
+            <form action="https://gmail.us3.list-manage.com/subscribe/post?u=ef500ef45f8aed2f720046461&amp;id=f27cd55314" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+                <h2>Subscribe to my mailing list to be updated about my new posts!</h2>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group"> <label for="mce-EMAIL">Email Address <span class="asterisk">*</span> </label> <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"></div>
+                <div class="mc-field-group"> <label for="mce-FNAME">Name </label> <input type="text" value="" name="FNAME" class="" id="mce-FNAME"></div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div><!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef500ef45f8aed2f720046461_f27cd55314" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+            </form>
+          </div>
+          <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+          <script type='text/javascript'>
+            (function($) {
+              window.fnames = new Array();
+              window.ftypes = new Array();
+              fnames[0] = 'EMAIL';
+              ftypes[0] = 'email';
+              fnames[1] = 'FNAME';
+              ftypes[1] = 'text';
+            }(jQuery));
+            var $mcj = jQuery.noConflict(true);
+          </script>
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function() {
+              this.page.url = 'http://pierpaolo28.pythonanywhere.com/';
+              this.page.identifier = 'http://pierpaolo28.pythonanywhere.com/';
+            };
+            (function() {
+              var d = document,
+                s = d.createElement('script');
+              s.src = 'https://pier-paolo-blog.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script> <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <nav class="social"> <a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/pierpaolo28"> <svg class="social__icon" viewBox="0 0 20 20" width="20px" height="20px">
+            <path
+              d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
+          </svg> </a> <a class="social__link" target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/Pier_Paolo_28"> <svg class="social__icon" viewBox="0 0 20 20" width="20px" height="20px">
+            <path
+              d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z" />
+          </svg> </a> <a class="social__link" target="_blank" rel="noopener noreferrer" href="https://medium.com/@pierpaoloippolito28"> <svg class="social__icon" viewBox="0 0 25 25" width="20px" height="20px" preserveAspectRatio="none">
+            <g fill="#cfd8dc">
+              <path d="m.5 3.5h7l5 11.5-2 5.592-7-15.092z" />
+              <path d="m.5 20.5h6l-3-3z" />
+              <path d="m21.5 5.5 2-2h-7v14.944l-2 2.056h9l-1.927-1.999z" />
+            </g>
+            <path
+              d="m.338 4.422 2.597 1.708v10.867l-2.712 2.676c-.476.471-.141 1.284.527 1.284h5.869c.667 0 1.004-.812.527-1.284l-2.712-2.676v-7.912c2.781 5.916 5.492 11.673 5.427 11.542.274.556 1.141.571 1.376-.075l.001-.002s.001-.001.001-.002c.65-1.793 2.044-5.638 1.955-5.394.05-.139 2.421-6.906 2.458-7.011v9.773l-1.741 1.765c-.467.474-.13 1.277.534 1.277h8.805c.662 0 1-.799.536-1.274l-1.673-1.713-.067-11.933 1.731-1.708c.476-.471.141-1.284-.527-1.284-.702 0 2.545-.001-6.87.004-.958.028-.634.889-3.986 9.772l-4.11-9.329c-.12-.272-.39-.448-.687-.448h-6.847c-.742.001-1.033.97-.412 1.377zm2.239 15.036 1.107-1.093 1.107 1.093zm14.575-14.912h4.271c-.479.535-.881.691-.879 1.185l.071 12.551c.002.476.391.643.854 1.175h-5.23c.517-.587.914-.748.914-1.234v-13.677zm-10.044 0 4.554 10.335-1.226 3.447c-6.176-13.116-5.959-13.322-7.181-13.782z"
+              / </svg> </a></nav><span>&copy; 2020 Pier Paolo Ippolito. All rights reserved.</span>
+    </div>
+  </footer>
+  <script async src="/static/bundle.js"></script> <!-- -->
+</body>
+<script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+<script>
+  addBackToTop({
+    diameter: 56,
+    backgroundColor: '#313237',
+    textColor: '#fff'
+  })
+</script>
 
-    <footer id="main-footer">
-      Copyright &copy; 2019
-    </footer>
-
-    <script>
-      // Select DOM Items
-      const menuBtn = document.querySelector(".menu-btn");
-      const menu = document.querySelector(".menu");
-      const menuNav = document.querySelector(".menu-nav");
-      const menuBranding = document.querySelector(".menu-branding");
-      const navItems = document.querySelectorAll(".nav-item");
-
-      // Set Initial State Of Menu
-      let showMenu = false;
-
-      menuBtn.addEventListener("click", toggleMenu);
-
-      function toggleMenu() {
-        if (!showMenu) {
-          menuBtn.classList.add("close");
-          menu.classList.add("show");
-          menuNav.classList.add("show");
-          menuBranding.classList.add("show");
-          navItems.forEach(item => item.classList.add("show"));
-
-          // Set Menu State
-          showMenu = true;
-        } else {
-          menuBtn.classList.remove("close");
-          menu.classList.remove("show");
-          menuNav.classList.remove("show");
-          menuBranding.classList.remove("show");
-          navItems.forEach(item => item.classList.remove("show"));
-
-          // Set Menu State
-          showMenu = false;
-        }
-      }
-    </script>
-  </body>
 </html>
