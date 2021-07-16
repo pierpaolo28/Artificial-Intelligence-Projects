@@ -20,6 +20,8 @@ Collection of Artificial Intelligence projects realised by me. Some of these top
 10. [Flask And Heroku For Online Machine Learning Deployement](https://pierpaolo28.github.io/blog/blog7/)
 11. [Computational Biology](https://pierpaolo28.github.io/blog/blog4/)
 12. [SQL For Data Science](https://pierpaolo28.github.io/blog/blog22/)
+13. [Reinforcement Learning For Anyone Open AI Gym And Ray](https://pierpaolo28.github.io/blog/blog56/)
+14. [Introduction To Evolutionary Algorithms](https://pierpaolo28.github.io/blog/blog38/)
 
 [contributors-shield]: https://img.shields.io/github/contributors/pierpaolo28/Artificial-Intelligence-Projects.svg?style=flat-square
 [contributors-url]: https://github.com/pierpaolo28/Artificial-Intelligence-Projects/graphs/contributors
