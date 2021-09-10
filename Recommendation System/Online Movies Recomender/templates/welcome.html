@@ -619,12 +619,15 @@
       }
     </style>
     <link
+      id="style"
       rel="preload"
       href="/static/css/main.css"
       as="style"
       onload="this.rel='stylesheet'"
     />
-    <noscript> <link rel="stylesheet" href="/static/css/main.css" /></noscript>
+    <noscript>
+      <link id="style" rel="stylesheet" href="/static/css/main.css"
+    /></noscript>
     <script type="text/javascript">
       /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
       (function (w) {
@@ -971,7 +974,7 @@
             />
             <style type="text/css">
               #mc_embed_signup {
-                background: #fff;
+                /* background: #fff; */
                 clear: left;
                 font: 14px Helvetica, Arial, sans-serif;
               }
@@ -1006,7 +1009,7 @@
                     />
                   </div>
                   <div class="mc-field-group">
-                    <label for="member_first_name">First Name</label>
+                    <label for="member_first_name">Name</label>
                     <input
                       class="revue-form-field"
                       type="text"
@@ -1014,7 +1017,7 @@
                       id="member_first_name"
                     />
                   </div>
-                  <div class="mc-field-group">
+                  <!-- <div class="mc-field-group">
                     <label for="member_last_name">Last Name</label>
                     <input
                       class="revue-form-field"
@@ -1022,7 +1025,7 @@
                       name="member[last_name]"
                       id="member_last_name"
                     />
-                  </div>
+                  </div> -->
                   <div class="clear">
                     <input
                       type="submit"
@@ -1064,8 +1067,88 @@
         </div>
       </div>
     </main>
+    <style>
+      /*slider switch css */
+      .theme-switch-wrapper {
+        /* display: flex; */
+        align-items: center;
+        em {
+          margin-left: 10px;
+          font-size: 1rem;
+        }
+      }
+      .theme-switch {
+        display: inline-block;
+        height: 34px;
+        position: relative;
+        width: 60px;
+      }
+      .theme-switch input {
+        display: none;
+      }
+      .slider {
+        background-color: #ccc;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 0.4s;
+      }
+      .slider:before {
+        background-color: #fff;
+        bottom: 4px;
+        content: "";
+        height: 26px;
+        left: 4px;
+        position: absolute;
+        transition: 0.4s;
+        width: 26px;
+      }
+      input:checked + .slider {
+        background-color: #66bb6a;
+      }
+      input:checked + .slider:before {
+        transform: translateX(26px);
+      }
+      .slider.round {
+        border-radius: 34px;
+      }
+      .slider.round:before {
+        border-radius: 50%;
+      }
+    </style>
     <footer class="footer">
+      <div class="theme-switch-wrapper">
+        <em>Dark Mode Toggle</em> <br /><br />
+        <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+      </div>
       <div class="container">
+        <br />
+        <!-- cssswitcher js -->
+        <script type="text/javascript">
+          var cssStyle = document.getElementById("style");
+          var listStyles = ["/static/css/main.css", "/static/css/dark.css"];
+          window.onload = function () {
+            if (localStorage && localStorage.getItem("style"))
+              cssStyle.href = localStorage.getItem("style");
+          };
+          function toggleStyle() {
+            var previousStyle = cssStyle.href;
+            if (previousStyle.endsWith(listStyles[0])) newStyle = listStyles[1];
+            else newStyle = listStyles[0];
+            cssStyle.href = newStyle;
+            if (localStorage) localStorage.setItem("style", newStyle);
+          }
+          const checkbox = document.getElementById("checkbox");
+          checkbox.addEventListener("change", () => {
+            toggleStyle();
+          });
+        </script>
         <nav class="social">
           <a
             class="social__link"
@@ -1119,7 +1202,8 @@
                 <path d="m.5 20.5h6l-3-3z" />
                 <path d="m21.5 5.5 2-2h-7v14.944l-2 2.056h9l-1.927-1.999z" />
               </g>
-              <path d="m.338 4.422 2.597 1.708v10.867l-2.712
+              <path
+                d="m.338 4.422 2.597 1.708v10.867l-2.712
               2.676c-.476.471-.141 1.284.527 1.284h5.869c.667 0
               1.004-.812.527-1.284l-2.712-2.676v-7.912c2.781 5.916 5.492 11.673
               5.427 11.542.274.556 1.141.571
@@ -1134,7 +1218,8 @@
               1.093zm14.575-14.912h4.271c-.479.535-.881.691-.879 1.185l.071
               12.551c.002.476.391.643.854
               1.175h-5.23c.517-.587.914-.748.914-1.234v-13.677zm-10.044 0 4.554
-              10.335-1.226 3.447c-6.176-13.116-5.959-13.322-7.181-13.782z" /
+              10.335-1.226 3.447c-6.176-13.116-5.959-13.322-7.181-13.782z"
+              />
             </svg>
           </a>
         </nav>

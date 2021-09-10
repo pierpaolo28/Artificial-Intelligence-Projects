@@ -575,8 +575,8 @@
       }
     }
   </style>
-  <link rel="preload" href="/static/css/main.css" as="style" onload="this.rel='stylesheet'"> <noscript>
-    <link rel="stylesheet" href="/static/css/main.css"></noscript>
+  <link id="style" rel="preload" href="/static/css/main.css" as="style" onload="this.rel='stylesheet'"> <noscript>
+    <link id="style" rel="stylesheet" href="/static/css/main.css"></noscript>
   <script type="text/javascript">
     /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
     (function(w) {
@@ -654,7 +654,8 @@
   <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
     <div class="container">
       <div class="header__inner"> <a class="header__logo" href="/">
-          <div class="header__logo--container"> <svg class="logo" viewBox="0 0 90 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+          <div class="header__logo--container">             <!-- <svg class="logo" viewBox="0 0 90 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none"> <g transform="translate(0.000000,46.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none"><path d="M100 332 c0 -5 21 -9 48 -8 62 1 142 -29 142 -54 0 -13 -16 -24 -55 -39 -77 -29 -78 -29 -72 29 3 28 2 50 -2 50 -5 0 -11 -23 -14 -52 -4 -28 -12 -55 -19 -60 -10 -6 -10 -8 0 -8 6 0 12 -9 12 -19 0 -11 3 -26 6 -35 11 -29 20 -17 16 22 l-4 38 55 17 c31 10 66 26 79 37 l23 20 -28 25 c-15 13 -44 29 -65 34 -45 13 -122 14 -122 3z"/><path d="M417 333 c-3 -5 20 -9 51 -9 63 0 137 -29 137 -54 0 -16 -51 -43 -102 -54 l-32 -7 6 52 c5 38 3 50 -5 45 -7 -4 -12 -26 -12 -50 0 -23 -5 -47 -12 -54 -9 -9 -9 -12 0 -12 7 0 12 -13 12 -29 0 -17 4 -32 9 -35 5 -4 7 11 4 33 -5 37 -4 39 28 46 18 4 53 16 77 26 55 24 55 53 0 82 -41 21 -152 35 -161 20z"/><path d="M777 333 c-10 -9 -9 -191 1 -196 4 -3 8 42 9 99 1 57 0 104 -1 104 -2 0 -6 -3 -9 -7z"/><path d="M350 145 c0 -9 5 -15 11 -13 6 2 11 8 11 13 0 5 -5 11 -11 13 -6 2 -11 -4 -11 -13z"/><path d="M666 153 c-11 -11 -6 -23 9 -23 8 0 15 4 15 9 0 13 -16 22 -24 14z"/><path d="M867 154 c-8 -8 1 -24 14 -24 5 0 9 7 9 15 0 15 -12 20 -23 9z"/> </g> </svg> -->
+            <svg class="logo" viewBox="0 0 90 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
               <g transform="translate(0.000000,46.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
                 <path
                   d="M100 332 c0 -5 21 -9 48 -8 62 1 142 -29 142 -54 0 -13 -16 -24 -55 -39 -77 -29 -78 -29 -72 29 3 28 2 50 -2 50 -5 0 -11 -23 -14 -52 -4 -28 -12 -55 -19 -60 -10 -6 -10 -8 0 -8 6 0 12 -9 12 -19 0 -11 3 -26 6 -35 11 -29 20 -17 16 22 l-4 38 55 17 c31 10 66 26 79 37 l23 20 -28 25 c-15 13 -44 29 -65 34 -45 13 -122 14 -122 3z" />
@@ -740,7 +741,7 @@
           <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
           <style type="text/css">
             #mc_embed_signup {
-              background: #fff;
+              /* background: #fff; */
               clear: left;
               font: 14px Helvetica, Arial, sans-serif;
             }
@@ -757,13 +758,13 @@
                   <input class="revue-form-field" type="email" name="member[email]" id="member_email">
                 </div>
                 <div class="mc-field-group">
-                  <label for="member_first_name">First Name</label>
+                  <label for="member_first_name">Name</label>
                   <input class="revue-form-field" type="text" name="member[first_name]" id="member_first_name">
                 </div>
-                <div class="mc-field-group">
+                <!-- <div class="mc-field-group">
                   <label for="member_last_name">Last Name</label>
                   <input class="revue-form-field" type="text" name="member[last_name]" id="member_last_name">
-                </div>
+                </div> -->
                 <div class="clear">
                   <input type="submit" value="Subscribe" name="member[subscribe]" id="mc-embedded-subscribe" class="button">
                 </div>
@@ -789,8 +790,81 @@
       </div>
     </div>
   </main>
+  <style>
+    /*slider switch css */
+    .theme-switch-wrapper {
+      /* display: flex; */
+      align-items: center;
+      em {
+        margin-left: 10px;
+        font-size: 1rem;
+      }
+    }
+    .theme-switch {
+      display: inline-block;
+      height: 34px;
+      position: relative;
+      width: 60px;
+    }
+    .theme-switch input {
+      display: none;
+    }
+    .slider {
+      background-color: #ccc;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: .4s;
+    }
+    .slider:before {
+      background-color: #fff;
+      bottom: 4px;
+      content: "";
+      height: 26px;
+      left: 4px;
+      position: absolute;
+      transition: .4s;
+      width: 26px;
+    }
+    input:checked+.slider {
+      background-color: #66bb6a;
+    }
+    input:checked+.slider:before {
+      transform: translateX(26px);
+    }
+    .slider.round {
+      border-radius: 34px;
+    }
+    .slider.round:before {
+      border-radius: 50%;
+    }
+  </style>
   <footer class="footer">
-    <div class="container">
+    <div class="theme-switch-wrapper"> <em>Dark Mode Toggle</em> <br><br> <label class="theme-switch" for="checkbox"> <input type="checkbox" id="checkbox" />
+      <div class="slider round"></div>
+    </label></div>
+  <div class="container"> <br> <!-- cssswitcher js -->
+    <script type='text/javascript'>
+      var cssStyle = document.getElementById('style');
+      var listStyles = ["/static/css/main.css", "/static/css/dark.css"];
+      window.onload = function() {
+        if (localStorage && localStorage.getItem("style")) cssStyle.href = localStorage.getItem("style");
+      };
+      function toggleStyle() {
+        var previousStyle = cssStyle.href;
+        if (previousStyle.endsWith(listStyles[0])) newStyle = listStyles[1];
+        else newStyle = listStyles[0];
+        cssStyle.href = newStyle;
+        if (localStorage) localStorage.setItem("style", newStyle);
+      };
+      const checkbox = document.getElementById('checkbox');
+      checkbox.addEventListener('change', () => {
+        toggleStyle();
+      })
+    </script>
       <nav class="social"> <a class="social__link" target="_blank" rel="noopener noreferrer" href="https://github.com/pierpaolo28"> <svg class="social__icon" viewBox="0 0 20 20" width="20px" height="20px">
             <path
               d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z" />
@@ -805,7 +879,7 @@
             </g>
             <path
               d="m.338 4.422 2.597 1.708v10.867l-2.712 2.676c-.476.471-.141 1.284.527 1.284h5.869c.667 0 1.004-.812.527-1.284l-2.712-2.676v-7.912c2.781 5.916 5.492 11.673 5.427 11.542.274.556 1.141.571 1.376-.075l.001-.002s.001-.001.001-.002c.65-1.793 2.044-5.638 1.955-5.394.05-.139 2.421-6.906 2.458-7.011v9.773l-1.741 1.765c-.467.474-.13 1.277.534 1.277h8.805c.662 0 1-.799.536-1.274l-1.673-1.713-.067-11.933 1.731-1.708c.476-.471.141-1.284-.527-1.284-.702 0 2.545-.001-6.87.004-.958.028-.634.889-3.986 9.772l-4.11-9.329c-.12-.272-.39-.448-.687-.448h-6.847c-.742.001-1.033.97-.412 1.377zm2.239 15.036 1.107-1.093 1.107 1.093zm14.575-14.912h4.271c-.479.535-.881.691-.879 1.185l.071 12.551c.002.476.391.643.854 1.175h-5.23c.517-.587.914-.748.914-1.234v-13.677zm-10.044 0 4.554 10.335-1.226 3.447c-6.176-13.116-5.959-13.322-7.181-13.782z"
-              / </svg> </a></nav><span>&copy; 2021 Pier Paolo Ippolito. All rights reserved.</span>
+              /> </svg> </a></nav><span>&copy; 2021 Pier Paolo Ippolito. All rights reserved.</span>
     </div>
   </footer>
   <script async src="/static/bundle.js"></script> <!-- -->
